@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">MyStrimz</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login">Login</string>
+    <string name="facebook_app_id">165060690771275</string>
+    <string name="user_canceled">login cancelled by user</string>
+    <string name="error_firstName">Please enter your frist name</string>
+    <string name="error_lastName">Please enter your last name</string>
+    <string name="error_emptyEmail">Please enter your email</string>
+    <string name="error_email">Please enter valid email</string>
+    <string name="error_emptyPassword">please enter the password</string>
+    <string name="error_password">Password should be atleast 6 digit</string>
+    <string name="terms_and_services">I Agree to Terms and Services</string>
+    <string name="check_internet">Please check your Network setting</string>
+    <string name="update_logo_and_info">Update Logo and Info</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="title_activity_discover">DiscoverActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="follow_me">Follow me</string>
+    <string name="loved_my_playlist">Loved my playlist</string>
+    <string name="approve_manualy_each_request">Approve manualy each request</string>
+    <string name="everyone_can_follow_my_posts">Everyone can follow my posts</string>
+    <string name="strimz_discover">Strimz Discover</string>
+    <string name="is_now_playing"> is now playing</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="new_playlist">New Playlist</string>
+    <string name="delete_playlist">Delete Playlist</string>
+    <string name="change_featured_image">Change Featured Image</string>
+    <string name="search_hint">Search Music</string>
+    <string name="youtube">YouTube</string>
+    <string name="soundcloud">SoundCloud</string>
+    <string name="playlist">Playlist</string>
+    <string name="please_wait">Please wait...</string>
+    <string name="coldplay_viva_la_vida">Coldplay - viva la vida</string>
+    <string name="type_in_new_tag">Type in New Tag</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="confirm_password_empty">Please enter confirm password</string>
+    <string name="enter_song_title">Please enter song title</string>
+    <string name="cancel">Cancel</string>
+
+
+</resources>

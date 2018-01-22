@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_toolbar"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.mystrimz.android.ui.activity.DiscoverBaseActivity"
+    tools:showIn="@layout/app_bar_discover">
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/color_toolbar"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:weightSum="2"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@color/color_orange"
+                android:orientation="vertical"
+                android:layout_height="80dp">
+                <RelativeLayout
+                    android:id="@+id/border_left_top"
+                    android:background="@color/color_orange"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/ten_dp">
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/leftTab"
+                    android:layout_below="@+id/border_left_top"
+                    android:paddingRight="@dimen/five_dp"
+                    android:paddingLeft="@dimen/ten_dp"
+                    android:paddingTop="@dimen/five_dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:paddingTop="@dimen/ten_dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/play_icon"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/strimz"
+                        android:layout_marginRight="@dimen/five_dp"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_toRightOf="@+id/play_icon"
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <com.mystrimz.android.fonts.MontserratMediumTextView
+                            android:layout_width="wrap_content"
+                            android:text="@string/strimz_discover"
+                            android:textSize="@dimen/fourteen_sp"
+                            android:textColor="@color/color_white"
+                            android:layout_height="wrap_content" />
+                        <com.mystrimz.android.fonts.MontserratLightTextView
+                            android:layout_width="wrap_content"
+                            android:text="Find Your Music Here"
+                            android:textSize="@dimen/twelve_sp"
+                            android:textColor="@color/color_white"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/profile" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/my_strimz_lin"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="80dp">
+                <RelativeLayout
+                    android:background="@color/color_pink"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <RelativeLayout
+                    android:id="@+id/border_right_top"
+                    android:layout_width="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/color_toolbar"
+                    android:layout_height="@dimen/ten_dp">
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rightTab"
+                    android:layout_below="@+id/border_right_top"
+                    android:paddingLeft="@dimen/five_dp"
+                    android:paddingTop="@dimen/ten_dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/my_strimz"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/my_strimz"
+                        android:layout_marginRight="@dimen/five_dp"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_toRightOf="@+id/my_strimz"
+                        android:layout_width="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content">
+                        <com.mystrimz.android.fonts.MontserratMediumTextView
+                            android:layout_width="wrap_content"
+                            android:text="@string/app_name"
+                            android:textSize="@dimen/fourteen_sp"
+                            android:textColor="@color/color_white"
+                            android:layout_height="wrap_content" />
+                        <com.mystrimz.android.fonts.MontserratLightTextView
+                            android:layout_width="wrap_content"
+                            android:text="Organize your music here"
+                            android:textSize="@dimen/twelve_sp"
+                            android:textColor="@color/color_white"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/border_right_bottom"
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:background="@color/color_orange"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="@dimen/ten_dp">
+
+                </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout
+            android:layout_below="@id/tabs"
+            android:id="@+id/frame_layout"
+            android:background="@color/color_white"
+            android:layout_above="@+id/player"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true" />
+
+        <include
+            layout="@layout/player_display"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_above="@+id/player"
+            android:layout_marginBottom="-22dp"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/share_song"
+                android:layout_toLeftOf="@+id/love_song"
+                android:layout_marginRight="@dimen/sixteen_dp"
+                android:adjustViewBounds="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/share_btn_bg"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/love_song"
+                android:layout_toLeftOf="@+id/play_fullScreen"
+                android:layout_marginRight="@dimen/sixteen_dp"
+                android:src="@drawable/like_btn_bg"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:src="@drawable/arrow_withbg"
+                android:layout_width="wrap_content"
+                android:id="@+id/play_fullScreen"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/twenty_dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/sixteen_dp"
+    android:paddingRight="@dimen/fifty_dp"
+    android:orientation="vertical">
+
+    <com.mystrimz.android.fonts.MontserratMediumTextView
+        android:text="Share Playlist"
+        android:id="@+id/sharePlaylist"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/sixteen_sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginBottom="@dimen/sixteen_dp"
+        android:layout_height="wrap_content" />
+    <com.mystrimz.android.fonts.MontserratMediumTextView
+        android:text="Report Content"
+        android:id="@+id/reportContent"
+        android:textSize="@dimen/sixteen_sp"
+        android:layout_below="@+id/sharePlaylist"
+        android:layout_width="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginBottom="@dimen/sixteen_dp"
+        android:layout_height="wrap_content" />
+    <com.mystrimz.android.fonts.MontserratMediumTextView
+        android:text="Edit Playlist"
+        android:id="@+id/editPlaylist"
+        android:layout_below="@+id/reportContent"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/sixteen_sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginBottom="@dimen/sixteen_dp"
+        android:layout_height="wrap_content" />
+    <com.mystrimz.android.fonts.MontserratMediumTextView
+        android:layout_width="wrap_content"
+        android:text="Delete Playlist"
+        android:id="@+id/deletePlaylist"
+        android:textSize="@dimen/sixteen_sp"
+        android:layout_below="@id/editPlaylist"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginBottom="@dimen/sixteen_dp"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

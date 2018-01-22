@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:orientation="horizontal"
+    android:layout_weight="1"
+    android:background="@color/color_orange"
+    android:layout_height="wrap_content">
+
+    <com.mystrimz.android.fonts.MontserratMediumTextView
+        android:layout_width="wrap_content"
+        android:text="Nightime"
+        android:id="@+id/tags_title"
+        android:padding="@dimen/ten_dp"
+        android:textColor="@color/color_white"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_width="1dp"
+        android:background="@color/color_white"
+        android:layout_height="match_parent"/>
+    <ImageView
+        android:id="@+id/remove_tag"
+        android:layout_width="wrap_content"
+        android:src="@drawable/cancel_icn"
+        android:padding="@dimen/ten_dp"
+        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

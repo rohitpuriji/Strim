@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="color_white">#fff</color>
+    <color name="Color_white">#ffffff</color>
+    <color name="color_toolbar">#062632</color>
+
+    <color name="button_color">#3486a7</color>
+    <color name="color_orange">#f89717</color>
+    <color name="color_pink">#ff586e</color>
+    <color name="color_black">#000</color>
+    <color name="color_gray">#f9f9f9</color>
+    <color name="color_darkGray">#a0a0a0</color>
+</resources>

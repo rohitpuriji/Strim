@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="@dimen/ten_dp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/sideMenu"
+        android:layout_width="wrap_content"
+        android:src="@drawable/sidemenu"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_marginRight="@dimen/ten_dp"
+        android:layout_height="wrap_content" />
+    <com.mystrimz.android.fonts.MontserratRegularTextView
+        android:layout_width="match_parent"
+        android:id="@+id/songs_name"
+        android:layout_toLeftOf="@+id/song_type"
+        android:layout_toRightOf="@+id/sideMenu"
+        android:layout_marginRight="@dimen/ten_dp"
+        android:text="Coldplay: A Sky Full Of Star"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/song_type"
+        android:layout_marginTop="@dimen/five_dp"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:src="@drawable/utube"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

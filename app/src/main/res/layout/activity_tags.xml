@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:autolabel="http://schemas.android.com/apk/res-auto"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    tools:context="com.mystrimz.android.ui.activity.TagsActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:alpha="0.7"
+        android:background="@android:color/black"
+        android:layout_height="match_parent" />
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:padding="@dimen/sixteen_dp"
+        android:id="@+id/tags_title"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/cross"
+            android:layout_width="wrap_content"
+            android:src="@drawable/cross"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:layout_marginRight="@dimen/twenty_dp"
+            android:layout_height="wrap_content" />
+
+        <com.mystrimz.android.fonts.MontserratMediumTextView
+            android:layout_width="wrap_content"
+            android:text="Add / Remove Tags"
+            android:layout_below="@+id/cross"
+            android:layout_marginTop="@dimen/thirty_dp"
+            android:textSize="@dimen/twenty_five_sp"
+            android:textColor="@color/color_white"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/tags_title"
+        android:layout_above="@+id/rt_enterTag"
+        android:padding="@dimen/sixteen_dp"
+        android:paddingBottom="@dimen/sixteen_dp"
+        android:layout_height="200dp">
+
+
+    <com.dpizarro.autolabel.library.AutoLabelUI
+        android:id="@+id/label_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        autolabel:show_cross="true"
+        autolabel:text_color="@android:color/white"
+        autolabel:text_size="@dimen/label_title_size"
+        autolabel:icon_cross="@drawable/cross"
+        autolabel:label_background_res="@color/color_orange"
+        autolabel:label_clickable="true"/>
+
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rt_enterTag"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:padding="@dimen/sixteen_dp"
+        android:layout_marginBottom="@dimen/one_hundred_twenty_dp"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_tags"
+            android:layout_toLeftOf="@+id/add_tag"
+            android:hint="@string/type_in_new_tag"
+            android:padding="@dimen/sixteen_dp"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:background="@color/color_darkGray"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/add_tag"
+            android:layout_width="wrap_content"
+            android:src="@drawable/tap_add"
+            android:paddingLeft="@dimen/sixteen_dp"
+            android:paddingRight="@dimen/sixteen_dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>
+

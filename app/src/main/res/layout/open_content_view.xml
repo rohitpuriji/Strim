@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    >
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:paddingLeft="@dimen/sixteen_dp"
+        android:paddingRight="@dimen/sixteen_dp"
+        android:layout_height="wrap_content">
+        <com.mystrimz.android.fonts.MontserratRegularTextView
+            android:layout_width="wrap_content"
+            android:id="@+id/title"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/sixteen_sp"
+            android:text="Report Content"
+            android:layout_height="wrap_content" />
+
+        <com.mystrimz.android.fonts.MontserratRegularTextView
+            android:layout_width="wrap_content"
+            android:id="@+id/discription"
+            android:layout_below="@+id/title"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/twelve_sp"
+            android:layout_marginBottom="@dimen/ten_dp"
+            android:text="Please Specify what is wrong the content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:padding="@dimen/ten_dp"
+            android:hint="Fill in complaint details"
+            android:layout_height="wrap_content"
+            android:background="@drawable/massege_contentbox_shape"
+            android:gravity="top"
+            android:id="@+id/edit_Text_popup"
+            android:lines="10"
+            android:layout_below="@+id/discription"
+            android:paddingLeft="@dimen/sixteen_dp"
+            android:paddingRight="@dimen/sixteen_dp"
+            android:paddingTop="@dimen/ten_dp"
+            android:paddingBottom="@dimen/sixteen_dp"
+            android:textSize="@dimen/thirteen_sp" />
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_weight="2"
+            android:layout_below="@+id/edit_Text_popup"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_width="wrap_content"
+                android:text="Ok"
+                android:layout_weight="1"
+                android:id="@+id/ok_button"
+                android:layout_height="wrap_content" />
+            <Button
+                android:layout_width="wrap_content"
+                android:text="@string/cancel"
+                android:layout_weight="1"
+                android:id="@+id/cancel2"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

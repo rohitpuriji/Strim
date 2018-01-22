@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_image"
+    android:padding="@dimen/sixteen_dp"
+    android:orientation="vertical"
+    tools:context="com.mystrimz.android.ui.activity.WelcomeActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/logo"
+        android:src="@drawable/logo"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/sixteen_dp"
+        android:layout_marginBottom="@dimen/thirthy_two_dp"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/googleLogin"
+        android:src="@drawable/google"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/ten_dp"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/facebookLogin"
+        android:src="@drawable/facebook"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/ten_dp"
+        android:layout_height="wrap_content" />
+    <com.mystrimz.android.fonts.MontserratRegularTextView
+        android:layout_width="wrap_content"
+        android:text="Or sign in with email"
+        android:layout_gravity="center"
+        android:textSize="@dimen/sixteen_sp"
+        android:layout_marginBottom="@dimen/sixteen_dp"
+        android:layout_marginTop="@dimen/thirthy_two_dp"
+        android:textColor="@color/color_white"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/login"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/login"
+                android:layout_marginBottom="@dimen/ten_dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/singUp"
+                android:src="@drawable/signup"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/ten_dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

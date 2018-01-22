@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical">
+
+    <com.mystrimz.android.fonts.MontserratRegularTextView
+        android:id="@+id/tvCamera"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:drawableLeft="@drawable/from_gallery"
+        android:drawablePadding="@dimen/ten_dp"
+        android:gravity="center"
+        android:text="Take a Photo"
+        android:textSize="@dimen/eighteen_sp" />
+
+    <View
+        android:id="@+id/View"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/tvCamera"
+
+        android:layout_marginTop="@dimen/ten_dp"
+        android:background="@android:color/black" />
+
+    <com.mystrimz.android.fonts.MontserratRegularTextView
+        android:id="@+id/tvGallery"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/View"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/ten_dp"
+        android:drawableLeft="@drawable/camera_two"
+        android:drawablePadding="@dimen/ten_dp"
+        android:gravity="center"
+        android:text="Select from Gallery"
+        android:textSize="@dimen/eighteen_sp" />
+
+
+</RelativeLayout>

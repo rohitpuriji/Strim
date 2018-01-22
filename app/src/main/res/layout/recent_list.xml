@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/sixteen_dp"
+    android:paddingTop="@dimen/five_dp"
+    android:paddingRight="@dimen/five_dp"
+    android:layout_height="95dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="40dp"
+        android:visibility="gone"
+        android:layout_height="40dp"
+        android:layout_marginRight="@dimen/five_dp"
+        android:src="@drawable/teresa"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/ln_right"
+        android:layout_toRightOf="@+id/profile_image"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingRight="@dimen/ten_dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <com.mystrimz.android.fonts.MontserratRegularTextView
+                android:layout_width="wrap_content"
+                android:id="@+id/user_name"
+                android:text="Nelson Mandela "
+                android:textColor="@color/colorPrimary"
+                android:layout_height="wrap_content" />
+            <com.mystrimz.android.fonts.MontserratRegularTextView
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="@string/is_now_playing"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/rl_songs_details"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/twenty_dp"
+            android:background="@drawable/song_list_border"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/playList_imagee"
+                android:layout_width="80dp"
+                android:src="@drawable/teresa"
+                android:layout_height="80dp" />
+            <RelativeLayout
+                android:id="@+id/rl_songs"
+                android:layout_toRightOf="@+id/playList_imagee"
+                android:layout_width="match_parent"
+                android:padding="@dimen/five_dp"
+                android:layout_height="wrap_content">
+                <com.mystrimz.android.fonts.MontserratBoldTextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/color_black"
+                    android:text="Nightime Selection"
+                    android:id="@+id/playListName"
+                    android:paddingTop="@dimen/five_dp"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:id="@+id/song_details"
+                    android:layout_below="@+id/playListName"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <com.mystrimz.android.fonts.MontserratRegularTextView
+                        android:layout_width="wrap_content"
+                        android:text="by "
+                        android:textSize="@dimen/twelve_sp"
+                        android:layout_height="wrap_content" />
+                    <com.mystrimz.android.fonts.MontserratRegularTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/twelve_sp"
+                        android:textColor="@color/colorPrimary"
+                        android:id="@+id/userName"
+                        android:layout_height="wrap_content" />
+                    <com.mystrimz.android.fonts.MontserratRegularTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/twelve_sp"
+                        android:id="@+id/totalTrack"
+                        android:singleLine="true"
+                        android:text=""
+                        android:ellipsize="end"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_below="@+id/song_details"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/five_dp"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/play_gry"
+                        android:layout_marginRight="@dimen/two_dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content" />
+                    <com.mystrimz.android.fonts.MontserratRegularTextView
+                        android:layout_width="wrap_content"
+                        android:text="0"
+                        android:id="@+id/totalViews"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/twelve_sp"
+                        android:layout_marginRight="@dimen/sixteen_dp"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/like_gry"
+                        android:layout_marginRight="@dimen/two_dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content" />
+                    <com.mystrimz.android.fonts.MontserratRegularTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="@dimen/twelve_sp"
+                        android:id="@+id/totalLove"
+                        android:text="0"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/menu"
+                    android:padding="@dimen/two_dp"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/menu"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_toRightOf="@+id/profile_image"
+        android:layout_width="wrap_content"
+        android:src="@drawable/nav_play"
+        android:adjustViewBounds="true"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/likeAndDislike"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="@dimen/five_dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/like_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

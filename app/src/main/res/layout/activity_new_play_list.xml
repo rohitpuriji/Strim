@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_gray"
+    tools:context="com.mystrimz.android.ui.activity.NewPlayListActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/color_toolbar"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imgBackArrow"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/arrow"/>
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="wrap_content"
+                android:src="@drawable/icon"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/title"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content" />
+
+            <com.mystrimz.android.fonts.MontserratRegularTextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/new_playlist"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/ten_dp"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <com.mystrimz.android.fonts.MontserratRegularTextView
+                android:id="@+id/save_list"
+                android:layout_toLeftOf="@+id/logOut"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:text="Save"
+                android:gravity="center"
+                android:background="@color/color_pink"
+                android:paddingRight="@dimen/sixteen_dp"
+                android:textSize="@dimen/sixteen_sp"
+                android:paddingLeft="@dimen/sixteen_dp"
+                android:textColor="@color/color_white"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:paddingTop="@dimen/sixteen_dp"
+            android:paddingLeft="@dimen/sixteen_dp"
+            android:paddingRight="@dimen/sixteen_dp"
+            android:layout_above="@+id/bottom_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/playList_name"
+            android:background="@drawable/playlist_border"
+            android:layout_width="match_parent"
+            android:hint="Playlist Name"
+            android:paddingLeft="@dimen/ten_dp"
+            android:layout_marginTop="@dimen/twenty_dp"
+            android:paddingBottom="@dimen/sixteen_dp"
+            android:paddingRight="@dimen/ten_dp"
+            android:paddingTop="@dimen/sixteen_dp"
+            android:textColor="@color/color_darkGray"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:textColorHint="@color/color_darkGray"
+            android:layout_marginBottom="@dimen/sixteen_dp"
+            android:layout_height="wrap_content" />
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:id="@+id/radio_group"
+            android:layout_below="@+id/playList_name"
+            android:layout_marginBottom="@dimen/sixteen_dp"
+            android:layout_height="wrap_content"
+            >
+            <RadioButton android:id="@+id/public_list"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Public"
+                android:checked="true"
+                android:layout_weight="1"
+                android:onClick="onRadioButtonClicked"
+                />
+            <RadioButton android:id="@+id/friends_only"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Friends Only"
+                android:onClick="onRadioButtonClicked"
+                />
+            <RadioButton android:id="@+id/private_list"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Private"
+                android:onClick="onRadioButtonClicked"
+                />
+        </RadioGroup>
+        <View
+            android:id="@+id/border_view"
+            android:layout_below="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:background="@color/color_darkGray"
+            android:layout_height="0.4dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_below="@+id/border_view"
+            android:layout_width="match_parent"
+            android:id="@+id/recycleview"
+            android:paddingTop="@dimen/ten_dp"
+            android:background="@color/color_gray"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bottom_view"
+            android:visibility="visible"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:background="@color/color_gray"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:paddingLeft="@dimen/sixteen_dp"
+                android:id="@+id/bottom_view_child"
+                android:paddingRight="@dimen/sixteen_dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/rl_editTags"
+                android:layout_width="match_parent"
+                android:paddingTop="@dimen/twenty_dp"
+                android:paddingBottom="@dimen/twenty_dp"
+                android:layout_height="wrap_content">
+
+                <com.mystrimz.android.fonts.MontserratRegularTextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tag"
+                    android:text="Tags:"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/five_dp"
+                    android:layout_height="wrap_content" />
+                <com.mystrimz.android.fonts.MontserratRegularTextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/tags_text"
+                    android:textColor="@color/color_orange"
+                    android:layout_marginRight="@dimen/five_dp"
+                    android:layout_toLeftOf="@+id/edit_tags"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/tag"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:id="@+id/edit_tags"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/edit"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <View
+                android:id="@+id/border_bottom_view"
+                android:layout_below="@+id/rl_editTags"
+                android:layout_width="match_parent"
+                android:background="@color/color_darkGray"
+                android:layout_height="0.4dp"/>
+            <RelativeLayout
+                android:layout_below="@+id/border_bottom_view"
+                android:layout_width="match_parent"
+                android:paddingBottom="@dimen/twenty_dp"
+                android:paddingTop="@dimen/twenty_dp"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_toLeftOf="@+id/delete_playlist"
+                    android:id="@+id/rl_changeimage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/feature_image"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/gallery"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/five_dp"
+                        android:layout_height="wrap_content" />
+                    <com.mystrimz.android.fonts.MontserratRegularTextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tv_feature_image"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/feature_image"
+                        android:textColor="@color/color_darkGray"
+                        android:textSize="@dimen/twelve_sp"
+                        android:layout_marginRight="@dimen/five_dp"
+                        android:text="@string/change_featured_image"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/delete_playlist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/remove_playlist"
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/cancel"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/five_dp"
+                        android:layout_height="wrap_content" />
+                    <com.mystrimz.android.fonts.MontserratRegularTextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/tv_cancle"
+                        android:textSize="@dimen/twelve_sp"
+                        android:layout_toRightOf="@+id/remove_playlist"
+                        android:textColor="@color/color_darkGray"
+                        android:text="@string/delete_playlist"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            </RelativeLayout>
+            <ImageView
+                android:id="@+id/next"
+                android:layout_width="wrap_content"
+                android:src="@drawable/next"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/forty_dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/add_moreitem"
+            android:visibility="visible"
+            android:layout_above="@+id/bottom_view"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/ten_dp"
+            android:layout_width="wrap_content"
+            android:src="@drawable/tap"
+            android:layout_marginBottom="-15dp"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+</LinearLayout>

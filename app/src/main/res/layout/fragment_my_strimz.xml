@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    tools:context="com.mystrimz.android.fragments.MyStrimzFragment">
+    <LinearLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:weightSum="3"
+        android:background="@color/color_pink"
+        android:padding="@dimen/ten_dp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/recently_play"
+                android:layout_height="wrap_content">
+                <com.mystrimz.android.fonts.MontserratMediumTextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tv_recentlyPlay"
+                    android:layout_centerHorizontal="true"
+                    android:padding="@dimen/ten_dp"
+                    android:textSize="@dimen/twelve_sp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:text="Recently Played"
+                    android:textColor="@color/color_pink"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/my_playList"
+                android:layout_height="wrap_content">
+                <com.mystrimz.android.fonts.MontserratMediumTextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tv_myPlaylist"
+                    android:layout_centerHorizontal="true"
+                    android:padding="@dimen/ten_dp"
+                    android:textSize="@dimen/twelve_sp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:text="My Playlists"
+                    android:textColor="@color/color_white"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/playList_ILiked"
+                android:layout_height="wrap_content">
+                <com.mystrimz.android.fonts.MontserratMediumTextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tv_playlist_iLiked"
+                    android:layout_centerHorizontal="true"
+                    android:padding="@dimen/ten_dp"
+                    android:textSize="@dimen/twelve_sp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:text="Playlists I Liked"
+                    android:textColor="@color/color_white"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/tabs"
+        android:id="@+id/recycleview"
+        android:paddingTop="@dimen/ten_dp"
+        android:background="@color/color_gray"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+</RelativeLayout>
